@@ -1,4 +1,5 @@
 ﻿using EvilLight.Model.ViewModel;
+using EvilLight.Util;
 using EvilLight.View;
 using System;
 using System.Collections.Generic;
@@ -81,6 +82,7 @@ namespace EvilLight
                 new MenuItem {Tag="Setting",Symbol=Symbol.Setting,Text="设置" }
             };
             this.ContentFrame.Navigate(typeof(HomePage));
+            DbUtil.Init();
         }
 
         private void ContentFrame_Navigated(object sender, NavigationEventArgs e)

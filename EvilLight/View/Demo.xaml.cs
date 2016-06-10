@@ -1,5 +1,10 @@
-﻿using System;
+﻿using EvilLight.Builder;
+using EvilLight.Model.Domain;
+using EvilLight.Model.Entity;
+using EvilLight.Util;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +30,14 @@ namespace EvilLight.View
         public Demo()
         {
             this.InitializeComponent();
+        }
+
+        private async void BtnTest_Click(object sender, RoutedEventArgs e)
+        {
+            ConfigUtil cu = new ConfigUtil();
+            UserConfig uc = cu.Get();
+            WeatherDataBuilder wb = new WeatherDataBuilder();
+            WetherData wd = await wb.Get(uc.UserCityId);
         }
     }
 }

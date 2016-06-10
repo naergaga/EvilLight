@@ -95,11 +95,42 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Builder\WeatherDataBuilder.cs" />
+    <Compile Include="Model\Domain\City.cs" />
+    <Compile Include="Model\Domain\CityInfo.cs" />
+    <Compile Include="Model\Domain\UserConfig.cs" />
+    <Compile Include="Util\CityUtil.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Entity\Alarm.cs" />
+    <Compile Include="Model\Entity\Aqi.cs" />
+    <Compile Include="Model\Entity\Astro.cs" />
+    <Compile Include="Model\Entity\Basic.cs" />
+    <Compile Include="Model\Entity\City.cs" />
+    <Compile Include="Model\Entity\Comf.cs" />
+    <Compile Include="Model\Entity\Cond.cs" />
+    <Compile Include="Model\Entity\Cond2.cs" />
+    <Compile Include="Model\Entity\Cw.cs" />
+    <Compile Include="Model\Entity\DailyForecast.cs" />
+    <Compile Include="Model\Entity\Drsg.cs" />
+    <Compile Include="Model\Entity\Flu.cs" />
+    <Compile Include="Model\Entity\HourlyForecast.cs" />
+    <Compile Include="Model\Entity\Now.cs" />
+    <Compile Include="Model\Entity\Sport.cs" />
+    <Compile Include="Model\Entity\Suggestion.cs" />
+    <Compile Include="Model\Entity\Tmp.cs" />
+    <Compile Include="Model\Entity\Trav.cs" />
+    <Compile Include="Model\Entity\Update.cs" />
+    <Compile Include="Model\Entity\Uv.cs" />
+    <Compile Include="Model\Entity\WetherData.cs" />
+    <Compile Include="Model\Entity\Wind.cs" />
+    <Compile Include="Model\Entity\Wind2.cs" />
+    <Compile Include="Model\Entity\Wind3.cs" />
     <Compile Include="Model\ViewModel\MenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ConfigUtil.cs" />
+    <Compile Include="Util\DbUtil.cs" />
     <Compile Include="View\Demo.xaml.cs">
       <DependentUpon>Demo.xaml</DependentUpon>
     </Compile>
@@ -141,7 +172,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.13.0">
+      <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

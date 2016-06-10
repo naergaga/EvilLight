@@ -8,6 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
         <TextBlock Text="Demo Page"/>
+            <Button Name="BtnTest" Click="BtnTest_Click">test</Button>
+        </StackPanel>
+        
     </Grid>
 </Page>
